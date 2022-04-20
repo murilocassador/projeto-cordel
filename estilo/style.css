@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Arial, Helvetica, sans-serif;
+    --fonte2:"Passion One", cursive;
+    --fonte3: "Sriracha", cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    min-height: 100vh; /* o tamanho mínimo da ALTURA será 100% o tamanho da tela*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* transforma todas as letras em maiúscula, deixando a primeira um pouco maior */
+    font-family: var(--fonte2);
+    font-size: 9vw; /*ajusta o tamanho da fonte  em % a LARGURA da tela */
+    font-weight: normal;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a { /* poderiamos usar header a, footer a caso tenha links no body com diferentes configurações */
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover { /* poderiamos usar    header a:hover, footer a:hover    caso tenha links com ação hover no body com diferentes configurações */
+    text-decoration: underline;
+}
+
+section{
+    padding-top: 10vh; /* aumenta em 10% a altura da div em comparação a viewport (tela apresentada) */
+    padding-bottom: 10vh; /* aumenta em 10% a altura da div em comparação a viewport (tela apresentada) */
+    line-height: 2em; /*aumenta o espaçamento entre as linhas de texto */
+    padding-left: 30px; /* aumenta o espaçamento entre a lateral da pagina ao texto */
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /*ajusta o tamanho da fonte  em % a LARGURA da tela */
+}
+
+section > p{
+    padding-bottom: 2em; /*espaçamento entre os parágrados (principalmente nos quadros brancos que temos 2 paragrafos juntos */
+}
+
+section.imagem > p{ 
+    background-color: rgba(0, 0, 0, 0.479);
+    display: inline-block; /* o bloco (fundo) se ajusta ao bloco do texto */
+    padding: 5px;
+    text-shadow: 2px 2px 0 black;
+}
+
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(83, 83, 83);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0 rgba(0, 0, 0, 0.445); /* sombra na box NA PARTE DE DENTRO */
+    background-size: cover;
+    background-attachment:  ;
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
